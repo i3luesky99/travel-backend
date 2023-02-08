@@ -11,11 +11,6 @@ class User extends Model {
   phone;
   createdAt;
   updatedAt;
-
-  // constructor(...args) {
-  //   super(...args);
-  //   restoreSequelizeAttributesOnClass(new.target, this);
-  // }
 }
 module.exports = (db) => {
   User.init(
@@ -32,7 +27,7 @@ module.exports = (db) => {
       },
       password: {
         type: DataTypes.STRING(100),
-        allowNull:false
+        allowNull: false,
       },
       first_name: {
         type: DataTypes.STRING(100),

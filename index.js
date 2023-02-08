@@ -20,6 +20,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentsRoutes);
 
-app.listen(3010, () => {
+app.listen(4000, () => {
   console.log("Backend is running");
 });

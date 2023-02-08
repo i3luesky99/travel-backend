@@ -5,7 +5,7 @@ const PostModel = require("./Post");
 const CommentModel = require("./Comment");
 
 const db = new Sequelize("blog", "root", "123456", {
-  host: "mysql-docker-local",
+  host: "localhost",
   dialect: "mysql",
   port: "3306",
 });
@@ -41,13 +41,3 @@ Comment.belongsTo(Post, {
   as: "post",
   foreignKey: "post_id",
 });
-
-
-// User.hasMany(Comment, {
-//   as: "comment",
-//   foreignKey: "user_id",
-// });
-// Comment.belongsTo(User, {
-//   as: "user",
-//   foreignKey: "user_id",
-// });
